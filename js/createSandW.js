@@ -40,14 +40,14 @@ function storeDataInStorage() {
   localStorage.setItem('PBJArray', strigifyPBJArray);
 }
 
-function getDataFromStorage() {
+// function getDataFromStorage() {
 
-  let storedPBJArray = localStorage.getItem('PBJArray');
-  if (storedPBJArray) {
-    PBJArray = JSON.parse(storedPBJArray);
-    // if you need to reinstaciate the plain Js objects back into PBJ DO IT HERE!!!
-  }
-}
+//   let storedPBJArray = localStorage.getItem('PBJArray');
+//   if (storedPBJArray) {
+//     PBJArray = JSON.parse(storedPBJArray);
+//     // if you need to reinstaciate the plain Js objects back into PBJ DO IT HERE!!!
+//   }
+// }
 
 function makePBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src) {
   let sando = new PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src);
