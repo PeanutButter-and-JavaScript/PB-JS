@@ -46,4 +46,4 @@ The voting is stored to generate a popularity chart
 
 ## Data Flow
 
-When the user get to the page they are greeted and have some mouthwatering images to prepare them for their sandwich ordering experiance. One of the sections on the page is a new Sandwich generator for the menu. It has interactive images that are buttons and a fun way to fill out the form. Then the user is notified that their sandwich was created and and are taken to a page where they can see all hard coded items as well as user generated items. There will also be an option to vote that is displayed in a chart. 
+When the user get to the page they are greeted and have some mouthwatering images to prepare them for their sandwich ordering experiance. One of the sections on the page is a new Sandwich generator for the menu. It has interactive images that are buttons and a fun way to fill out the form. Then the user is notified that their sandwich was created and and are taken to a page where they can see all hard coded items as well as user generated items. There will also be an option to vote that is displayed in a chart.

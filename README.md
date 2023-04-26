@@ -18,10 +18,10 @@ Dan Quinn
 
 ## Wireframes
 
-![Domain Model](img/Screenshot%202023-04-24%20at%204.22.08%20PM.png)
-![Home](img/Screenshot%202023-04-24%20at%201.44.59%20PM.png)
-![Menu](img/Screenshot%202023-04-24%20at%201.45.07%20PM.png)
-![About Us](img/Screenshot%202023-04-24%20at%201.45.03%20PM.png)
+![Domain Model](screenshots/Screenshot%202023-04-24%20at%204.22.08%20PM.png)
+![Home](screenshots/Screenshot%202023-04-24%20at%201.44.59%20PM.png)
+![Menu](screenshots/Screenshot%202023-04-24%20at%201.45.07%20PM.png)
+![About Us](screenshots/Screenshot%202023-04-24%20at%201.45.03%20PM.png)
 
 ## Lighthouse Accessibility Report Score
 
