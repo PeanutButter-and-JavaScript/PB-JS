@@ -12,6 +12,8 @@ function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src) {
   this.hasBananas = bananas;
   this.isCutInTwo = cutInTwo;
   this.src = `img/${src}.jpg`;
+  this.votes = 0;
+
 }
 
 // Global Functions
@@ -35,10 +37,6 @@ let handleSubmit = function (event) {
   console.log(PBJArray);
 };
 
-function storeDataInStorage() {
-  let strigifyPBJArray = JSON.stringify(PBJArray);
-  localStorage.setItem('PBJArray', strigifyPBJArray);
-}
 
 // function getDataFromStorage() {
 
@@ -49,12 +47,16 @@ function storeDataInStorage() {
 //   }
 // }
 
-function makePBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src) {
-  let sando = new PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src);
+function makePBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src, votes) {
+  let sando = new PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src, votes);
   PBJArray.push(sando);
   storeDataInStorage();
 }
 
+function storeDataInStorage() {
+  let strigifyPBJArray = JSON.stringify(PBJArray);
+  localStorage.setItem('PBJArray', strigifyPBJArray);
+}
 // Executable Code
 
 makePBJ('Danwich', 'wheat', 'chunky', 'grape', true, true, 'img/...');
