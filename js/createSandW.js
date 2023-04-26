@@ -3,6 +3,19 @@
 // Global Varriables
 let PBJArray = [];
 
+let PBJArrayFromStorage = localStorage.getItem('PBJArray');
+if (PBJArrayFromStorage) {
+  PBJArray = JSON.parse(PBJArrayFromStorage);
+} else {
+  let danwich = new PBJ('Danwich', 'wheat', 'chunky', 'grape', true, true, 'img/...');
+  let DanwichTwoPointO = new PBJ('DanwichTwoPointO', 'white', 'chunky', 'grape', true, true, 'src');
+  let SmashTastic = new PBJ('SmashTastic', 'wheat', 'strawberry', 'chunky', true, true, 'src');
+  let antonWich = new PBJ('antonWich', 'wheat', 'smooth', 'strawberry', false, false, 'img/');
+
+  PBJArray.push(danwich, DanwichTwoPointO, SmashTastic, antonWich);
+}
+
+
 // Constructor
 function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src) {
   this.name = name;
@@ -59,9 +72,6 @@ function storeDataInStorage() {
 }
 // Executable Code
 
-makePBJ('Danwich', 'wheat', 'chunky', 'grape', true, true, 'img/...');
-makePBJ('DanwichTwoPointO', 'white', 'chunky', 'grape', true, true, 'src');
-makePBJ('SmashTastic', 'wheat', 'strawberry', 'chunky', true, true, 'src');
 
 // Event Listeners
 
