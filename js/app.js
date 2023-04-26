@@ -52,6 +52,67 @@ function menuRender() {
   }
 }
 
+function viewResults() {
+  renderChart();
+  viewResultsBtn.removeEventListener('click', viewResults);
+}
+
+function renderChart() {
+
+  const ctx = document.getElementById('myChart');
+
+  let pbjVotes = [];
+  let pbjNames = [];
+
+  for (let i = 0; i < PBJMenuArray.length; i++) {
+    console.log(PBJMenuArray[i]);
+    let name = PBJMenuArray[i].name;
+
+    pbjNames.push(name);
+    pbjVotes.push(PBJMenuArray[i].votes);
+    
+  }
+
+  let config = {
+    type: 'bar',
+    data: {
+      labels: pbjNames,
+      datasets: [
+        {
+          label: 'PBJ Votes',
+          data: pbjVotes,
+          borderWidth: 1,
+          backgroundColor: [
+            'rgb(25, 117, 1, 1)'
+          ],
+          borderColor: [
+            'rgb(25, 117, 1, 1)'
+          ]
+        },
+        
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  };
+  new Chart(ctx, config);
+}
+
+renderChart();
+
+
+
+
+
+
+
+
+
 
 // Executable Code
 menuRender();
