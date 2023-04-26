@@ -34,11 +34,11 @@ function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src) {
 let handleSubmit = function (event) {
   event.preventDefault();
   const name = event.target.name.value;
-  const breadType = event.target.breadType.checked;
-  const pBType = event.target.pBType.checked;
-  const jellyType = event.target.jellyType.checked;
-  const bananaType = event.target.bananaType.checked;
-  const cutType = event.target.cutType.checked;
+  const breadType = event.target.breadType.value;
+  const pBType = event.target.pBType.value;
+  const jellyType = event.target.jellyType.value;
+  const bananaType = event.target.bananaType.value;
+  const cutType = event.target.cutType.value;
   console.log(breadType, pBType, jellyType, bananaType, cutType);
   console.log(event);
   makePBJ(
