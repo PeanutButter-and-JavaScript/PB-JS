@@ -28,21 +28,76 @@
         <label>Sando Name
           <input type="text" name="name" placeholder="Sando Name " required>
         </label>
-        <label>Bread Type
-          <input type="text" name="breadType" placeholder="Bread Type" required>
-        </label>
-        <label>PB Type
-          <input type="text" name="pBType" placeholder="PB Type" required>
-        </label>
-        <label>Jelly Type
-          <input type="text" name="jellyType" placeholder="Jelly Type" required>
-        </label>
-        <label>Bananas?
+
+        <fieldset>
+          <label for="menu">select bread</label>
+          <select id="menu" name="breadType">
+            <option value="" disabled selected>Select Bread</option>
+            <option value="White">White</option>
+            <option value="Wheat">Wheat</option>
+          </select>
+
+        </fieldset>
+
+
+        <fieldset>
+
+          <!-- <legend>What type of Peanut Butter?</legend>
+          <label for="smoothPB">
+            <input type="radio" id="smoothPB" value="Smooth PB" name="pBType">
+            <img src="img/strawberryJam.jpeg" alt="Radio button imag">
+            Smooth PB
+          </label> -->
+
+        </fieldset>
+
+
+        <fieldset>
+          <label for="strawberryJam">
+            <input type="radio" id="strawberryJam" value="Strawberry Jam" name="jellyType">
+            <!-- <img src="img/smoothPB.jpeg" alt="Radio button imag"> -->
+            Strawberry Jam
+          </label>
+          <label for="grapeJam">
+            <input type="radio" id="grapeJam" value="Grape Jam" name="jellyType">
+            <!-- <img src="img/chunkyPB.jpeg" alt="Radio button imag"> -->
+            Grape Jam
+          </label>
+        </fieldset>
+
+
+        <fieldset>
+          <label for="bananaYes">
+            <input type="checkbox" id="bananaYes" value="Yes" name="bananaType">
+            <!-- <img src="img/bananaOption.jpeg" alt="Radio button imag"> -->
+            add banana
+          </label>
+          <!-- <label for="bananaNo">
+            <input type="checkbox" id="bananaNo" value="No" name="bananaType">
+            <img src="img/renaissance.jpeg" alt="Radio button imag">
+            Banana No
+          </label> -->
+        </fieldset>
+
+        <fieldset>
+          <label for="cutTypeYes">
+            <input type="checkbox" id="cutTypeYes" value="Yes" name="cutType">
+            <!-- <img src="img/bananaOption.jpeg" alt="Radio button imag"> -->
+            Cut Yes
+          </label>
+          <label for="cutTypeNo">
+            <input type="checkbox" id="cutTypeNo" value="No" name="cutType">
+            <!-- <img src="img/renaissance.jpeg" alt="Radio button imag"> -->
+            Cut No
+          </label>
+        </fieldset>
+
+        <!-- <label>Bananas?
           <input type="text" name="bananaType" placeholder="Bananas Y/N" required>
         </label>
         <label>Cut in 1/2?
           <input type="text" name="cutType" placeholder="Cut Y/N" required>
-        </label>
+        </label> -->
       </fieldset>
       <button type="text" id="voteButton" name="submit">Create Sammich!</button>
     </form>

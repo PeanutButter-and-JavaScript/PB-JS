@@ -66,3 +66,11 @@ footer{
     width: 100%;
    padding: 20px; margin-top: 20px;
 }
+
+.radio-container {
+  display: flex;
+  align-items: center;
+}
+.radio-container label {
+  margin-right: 10px;
+}
