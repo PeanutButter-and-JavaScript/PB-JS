@@ -9,9 +9,6 @@ const menuElement = document.getElementById('ul');
 // let votes = 0;
 let voteButton = document.getElementById('voteButton');
 const menu = document.getElementById('menu');
-// Constructor for chart?
-
-
 
 function getDataFromStorage() {
 
@@ -19,9 +16,7 @@ function getDataFromStorage() {
   if (storedPBJArray) {
     PBJArray = JSON.parse(storedPBJArray);
     // if you need to reinstaciate the plain Js objects back into PBJ DO IT HERE!!!
-    // PBJArray[0].votes++;
     PBJArray = storedPBJArray;
-    // console.log('aftervoted', PBJArray);
   }
 }
 
@@ -30,16 +25,12 @@ function handleVoteClick() {
   // preventDefault();
   chart.destroy();
   const selectedId = menu.options[menu.selectedIndex].text;
-  // const selectedItem = PBJArray.find(item => item.name === selectedId);
-  // console.log(selectedId);
-  // selectedItem.votes++;
   for (let i = 0; i < PBJArray.length; i++) {
     if (PBJArray[i].name === selectedId) {
 
       PBJArray[i].votes++;
     }
   }
-  // console.log(PBJArray);
   renderChart();
   // let getChart = document.getElementById('chart');
   // const ctx = document.getElementById('myChart');
@@ -60,13 +51,13 @@ voteButton.addEventListener('click', handleVoteClick);
 function menuRender() {
   // getDataFromStorage();
   for (let i = 0; i < PBJArray.length; i++) {
-    // console.log(PBJArray);
+    console.log(PBJArray);
     let liName = document.createElement('li');
     liName.textContent = PBJArray[i].name;
     menuElement.appendChild(liName);
 
     let liIngredients = document.createElement('li');
-    liIngredients.textContent = 'Ingredients: ' + PBJArray[i].breadType + '\n' + PBJArray[i].pbType + '\n' + PBJArray[i].jellyType + '\n' + PBJArray[i].hasBananas + '\n' + PBJArray[i].isCutInTwo;
+    liIngredients.textContent = `Ingredients: ${PBJArray[i].breadType}, ${PBJArray[i].pbType}, ${PBJArray[i].jellyType}, ${PBJArray[i].hasBananas}, ${PBJArray[i].isCutInTwo}`;
     menuElement.appendChild(liIngredients);
 
     let liSrc = document.createElement('li');
@@ -82,34 +73,21 @@ function getDataFromStorage() {
   if (storedPBJArray) {
     PBJArray = JSON.parse(storedPBJArray);
     // if you need to reinstaciate the plain Js objects back into PBJ DO IT HERE!!!
-    // PBJArray[0].votes++;
-    PBJArray.push(storedPBJArray);
-    PBJArray.push(PBJArray);
-    // console.log('aftervoted', PBJArray);
   }
 }
 
-function viewResults() {
-  renderChart();
-  viewResultsBtn.removeEventListener('click', viewResults);
-}
-
 function renderChart() {
-  menuRender();
   const ctx = document.getElementById('myChart');
   let pbjNames = [];
   let pbjVotes = [];
 
   for (let i = 0; i < PBJArray.length; i++) {
-    // console.log(PBJArray[i]);
     let name = PBJArray[i].name;
 
     pbjNames.push(name);
     pbjVotes.push(PBJArray[i].votes);
 
   }
-  // console.log(pbjVotes);
-  // console.log(pbjNames);
 
   let config = {
     type: 'bar',
@@ -139,25 +117,16 @@ function renderChart() {
     }
   };
   chart = new Chart(ctx, config);
-  // console.log(pbjNames);
-  // console.log(pbjVotes);
 }
 
 getDataFromStorage();
 renderChart();
 
 
-
-
-
-
-
-
-
-
 // Executable Code
 menuRender();
 
+//adds sandwiches to the drop down votes list
 for (let i = 0; i < PBJArray.length; i++) {
   const option = document.createElement('option');
   option.text = PBJArray[i].name;
