@@ -92,8 +92,8 @@ main {
 
 .graph {
   position: relative;
-  height: 35vh;
-  width: 55vw;
+  height: 30%;
+  width: 10%;
 }
 footer{
   background-color: rgb(132, 0, 255);
