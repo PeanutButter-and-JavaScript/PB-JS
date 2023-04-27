@@ -53,11 +53,11 @@ function menuRender() {
   for (let i = 0; i < PBJArray.length; i++) {
     console.log(PBJArray);
     let liName = document.createElement('li');
-    liName.textContent = PBJArray[i].name;
+    liName.textContent = `The ${PBJArray[i].name}`;
     menuElement.appendChild(liName);
 
     let liIngredients = document.createElement('li');
-    liIngredients.textContent = `Ingredients: ${PBJArray[i].breadType}, ${PBJArray[i].pbType}, ${PBJArray[i].jellyType}, ${PBJArray[i].hasBananas}, ${PBJArray[i].isCutInTwo}`;
+    liIngredients.textContent = `Ingredients: ${PBJArray[i].breadType}, ${PBJArray[i].pbType}, ${PBJArray[i].jellyType}, ${PBJArray[i].hasBananas} banana, ${PBJArray[i].isCutInTwo} sandwich`;
     menuElement.appendChild(liIngredients);
 
     let liSrc = document.createElement('li');
