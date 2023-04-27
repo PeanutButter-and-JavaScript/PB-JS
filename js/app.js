@@ -50,6 +50,7 @@ voteButton.addEventListener('click', handleVoteClick);
 
 function menuRender() {
   for (let i = 0; i < PBJArray.length; i++) {
+
     let li = document.createElement('li');
     let article = document.createElement('article');
     let div = document.createElement('div');
@@ -57,6 +58,7 @@ function menuRender() {
     let img = document.createElement('img');
     img.src = PBJArray[i].src;
     article.appendChild(img);
+
 
     let h3 = document.createElement('h3');
     h3.textContent = PBJArray[i].name;
