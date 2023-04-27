@@ -7,10 +7,10 @@ let PBJArrayFromStorage = localStorage.getItem('PBJArray');
 if (PBJArrayFromStorage) {
   PBJArray = JSON.parse(PBJArrayFromStorage);
 } else {
-  let danwich = new PBJ('Danwich', 'Wheat', 'Chunky', 'Grape', 'Bananas', 'Whole/Half', 'img/...', 5);
-  let DanwichTwoPointO = new PBJ('DanwichTwoPointO', 'White', 'Chunky', 'Grape', 'Bananas', 'Whole/Half', 'src',8);
-  let SmashTastic = new PBJ('SmashTastic', 'Wheat', 'Strawberry', 'Chunky', 'Bananas', 'Whole/Half', 'src', 10);
-  let antonWich = new PBJ('AntonWich', 'Wheat', 'Smooth', 'Strawberry', 'Nutella', 'Whole/Half', 'img/', 15);
+  let danwich = new PBJ('Danwich', 'Wheat', 'Chunky', 'Grape', 'Optional: Bananas', 'Whole/Half', 'img/...', 5);
+  let DanwichTwoPointO = new PBJ('DanwichTwoPointO', 'White', 'Chunky', 'Grape', 'Optional: Bananas', 'Whole/Half', 'src', 8);
+  let SmashTastic = new PBJ('SmashTastic', 'Wheat', 'Strawberry', 'Chunky', 'Optional: Bananas', 'Whole/Half', 'src', 10);
+  let antonWich = new PBJ('AntonWich', 'Wheat', 'Smooth', 'Strawberry', 'Optional: Nutella', 'Whole/Half', 'img/', 15);
 
   PBJArray.push(danwich, DanwichTwoPointO, SmashTastic, antonWich);
   // PBJMenuArray.push(danwich, DanwichTwoPointO, SmashTastic, antonWich);
@@ -55,7 +55,7 @@ let handleSubmit = function (event) {
     window.location.href = "https://www.google.com";
   }
 
-  form.removeEventListener('submit',handleSubmit);
+  form.removeEventListener('submit', handleSubmit);
   console.log(PBJArray);
   console.log(breadType);
 };
