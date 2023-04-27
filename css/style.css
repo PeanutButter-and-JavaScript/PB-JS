@@ -89,6 +89,12 @@ main {
   flex-direction: row;
   justify-content: flex-start;
 }
+
+.graph {
+  position: relative;
+  height: 35vh;
+  width: 55vw;
+}
 footer{
   background-color: rgb(132, 0, 255);
   position: fixed;
