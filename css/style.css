@@ -51,6 +51,7 @@ body {
 }
 
 main {
+  position: relative;
   background-color: rgba(117, 57, 27, 0.34);
   margin: 3rem ;
   display: grid;
@@ -60,6 +61,11 @@ main {
   flex-direction: row;
   justify-content: center;
   padding: bottom 80px;
+  margin-bottom: 100px;
+}
+
+.bio{
+  position: relative;
 }
 
 .bio h2{
@@ -70,30 +76,39 @@ main {
 }
 
 .bio img{
-  width: 325px;
-  height: 325px;
+  width: 85%;
+  height: 55%;
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .bio p{
-  width: 300px;
-  height: 400px;
-  margin-bottom: 10px;
+  width: 85%;
+  height: 20%;
+  padding-bottom: 10%;
+  margin-bottom: 12px;
   margin-left: 6px;
   text-indent: 7%;
-  line-height: 1;
+  line-height: 1.3;
   font-size: larger;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
+.bio a{
+  display: block;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
+  line-height: 1.3;
+}
+
 .graph {
   position: relative;
-  height: 30%;
-  width: 10%;
+  height: 40vh;
+  width: 80vh;
 }
 footer{
   background-color: rgb(132, 0, 255);
@@ -104,14 +119,14 @@ footer{
   width: 100%;
   color: white;
   text-align: center;
-  margin-top: -50px;
+  margin-top: 50px;
   /* margin-bottom: 2px; */
    bottom: 0;
     width: 100%;
    padding: 20px;
 }
 
-/.radio-container { 
+.radio-container { 
   display: flex;
   align-items: center;
 }
