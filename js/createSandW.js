@@ -7,17 +7,18 @@ let PBJArrayFromStorage = localStorage.getItem('PBJArray');
 if (PBJArrayFromStorage) {
   PBJArray = JSON.parse(PBJArrayFromStorage);
 } else {
-  let danwich = new PBJ('Danwich', 'wheat', 'chunky', 'grape', true, true, 'img/...');
-  let DanwichTwoPointO = new PBJ('DanwichTwoPointO', 'white', 'chunky', 'grape', true, true, 'src');
-  let SmashTastic = new PBJ('SmashTastic', 'wheat', 'strawberry', 'chunky', true, true, 'src');
-  let antonWich = new PBJ('antonWich', 'wheat', 'smooth', 'strawberry', false, false, 'img/');
+  let danwich = new PBJ('Danwich', 'wheat', 'chunky', 'grape', true, true, 'img/...', 5);
+  let DanwichTwoPointO = new PBJ('DanwichTwoPointO', 'white', 'chunky', 'grape', true, true, 'src',8);
+  let SmashTastic = new PBJ('SmashTastic', 'wheat', 'strawberry', 'chunky', true, true, 'src', 10);
+  let antonWich = new PBJ('antonWich', 'wheat', 'smooth', 'strawberry', false, false, 'img/', 15);
 
   PBJArray.push(danwich, DanwichTwoPointO, SmashTastic, antonWich);
+  // PBJMenuArray.push(danwich, DanwichTwoPointO, SmashTastic, antonWich);
 }
 
 
 // Constructor
-function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src) {
+function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src, votes = 0) {
   this.name = name;
   this.breadType = breadType;
   this.pbType = pbType;
@@ -25,7 +26,7 @@ function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src) {
   this.hasBananas = bananas;
   this.isCutInTwo = cutInTwo;
   this.src = `img/${src}.jpg`;
-  this.votes = 0;
+  this.votes = votes;
 
 }
 
@@ -80,4 +81,4 @@ function storeDataInStorage() {
 
 
 
-console.log(PBJArray);
+
