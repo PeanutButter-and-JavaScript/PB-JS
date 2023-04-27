@@ -7,6 +7,8 @@ header {
 background-color: rgb(132, 0, 255);
 justify-content: space-between;
 margin-bottom: 2rem;
+display: flex;
+flex-direction: column;
 }
 
 #myCart {
@@ -60,17 +62,33 @@ main {
   padding: bottom 80px;
 }
 
-h2{
-  font-size: larger;
+.bio h2{
+  font-size: xx-large;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 8px;
 }
-img{
+
+.bio img{
   width: 325px;
   height: 325px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
-
+.bio p{
+  width: 300px;
+  height: 400px;
+  margin-bottom: 10px;
+  margin-left: 6px;
+  text-indent: 7%;
+  line-height: 1;
+  font-size: larger;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 footer{
   background-color: rgb(132, 0, 255);
   position: fixed;
