@@ -49,21 +49,29 @@ function handleVoteClick() {
 voteButton.addEventListener('click', handleVoteClick);
 
 function menuRender() {
-  // getDataFromStorage();
   for (let i = 0; i < PBJArray.length; i++) {
-    console.log(PBJArray);
-    let liName = document.createElement('li');
-    liName.textContent = `The ${PBJArray[i].name}`;
-    menuElement.appendChild(liName);
 
-    let liIngredients = document.createElement('li');
-    liIngredients.textContent = `Ingredients: ${PBJArray[i].breadType}, ${PBJArray[i].pbType}, ${PBJArray[i].jellyType}, ${PBJArray[i].hasBananas} banana, ${PBJArray[i].isCutInTwo} sandwich`;
-    menuElement.appendChild(liIngredients);
+    let li = document.createElement('li');
+    let article = document.createElement('article');
+    let div = document.createElement('div');
 
-    let liSrc = document.createElement('li');
-    liSrc.textContent = PBJArray[i].src;
-    menuElement.appendChild(liSrc);
+    let img = document.createElement('img');
+    img.src = PBJArray[i].src;
+    article.appendChild(img);
 
+
+    let h3 = document.createElement('h3');
+    h3.textContent = PBJArray[i].name;
+    div.appendChild(h3);
+
+    let p = document.createElement('p');
+    p.textContent = `Ingredients: ${PBJArray[i].breadType}, ${PBJArray[i].pbType}, ${PBJArray[i].jellyType}, ${PBJArray[i].hasBananas}, ${PBJArray[i].isCutInTwo}`;
+    div.appendChild(p);
+
+
+    li.appendChild(article);
+    article.appendChild(div);
+    menuElement.appendChild(li);
   }
 }
 
