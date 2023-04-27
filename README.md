@@ -12,6 +12,7 @@ Dan Quinn
 
 ## Links and Resources
 
+https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
 [User Stories](https://trello.com/b/U0EfzBKJ/user-stories)
 [chart.js](https://www.chartjs.org/)
 

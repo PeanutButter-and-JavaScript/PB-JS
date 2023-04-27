@@ -1,8 +1,11 @@
 'use strict';
 
 // Global Varriables
+
+
+let chart = null;
+
 const menuElement = document.getElementById('ul');
-let PBJMenuArray = [];
 // let votes = 0;
 let voteButton = document.getElementById('voteButton');
 const menu = document.getElementById('menu');
@@ -14,41 +17,75 @@ function getDataFromStorage() {
 
   let storedPBJArray = localStorage.getItem('PBJArray');
   if (storedPBJArray) {
-    PBJMenuArray = JSON.parse(storedPBJArray);
+    PBJArray = JSON.parse(storedPBJArray);
     // if you need to reinstaciate the plain Js objects back into PBJ DO IT HERE!!!
-    // PBJMenuArray[0].votes++;
-    console.log('aftervoted', PBJMenuArray);
+    // PBJArray[0].votes++;
+    PBJArray = storedPBJArray;
+    // console.log('aftervoted', PBJArray);
   }
 }
 
 
 function handleVoteClick() {
-  // event.preventDefault();
+  // preventDefault();
+  chart.destroy();
   const selectedId = menu.options[menu.selectedIndex].text;
-  const selectedItem = PBJMenuArray.find(item => item.name === selectedId);
-  console.log(selectedId);
-  selectedItem.votes++;
-  console.log(PBJMenuArray);
+  // const selectedItem = PBJArray.find(item => item.name === selectedId);
+  // console.log(selectedId);
+  // selectedItem.votes++;
+  for (let i = 0; i < PBJArray.length; i++) {
+    if (PBJArray[i].name === selectedId) {
+
+      PBJArray[i].votes++;
+    }
+  }
+  // console.log(PBJArray);
+  renderChart();
+  // let getChart = document.getElementById('chart');
+  // const ctx = document.getElementById('myChart');
+  // canvas.parentNode.removeChild(canvas);
+  // getChart.removeChild(ctx);
+  // let newChart = document.createElement('canvas');
+  // newChart.id = 'myChart';
+  // getChart.appendChild(ctx);
+  // let canvas = ctx.getContext('2d');
+  // canvas.clearRect(0, 0, ctx.clientWidth, ctx.clientHeight);
+  // setTimeout(() => {
+  //   console.log("Delayed for 5 secondz.");
+  // }, "5000");
 }
 
-voteButton.addEventListener('click',handleVoteClick);
+voteButton.addEventListener('click', handleVoteClick);
 
 function menuRender() {
-  getDataFromStorage();
-  for (let i = 0; i < PBJMenuArray.length; i++) {
-    console.log(PBJMenuArray);
+  // getDataFromStorage();
+  for (let i = 0; i < PBJArray.length; i++) {
+    // console.log(PBJArray);
     let liName = document.createElement('li');
-    liName.textContent = PBJMenuArray[i].name;
+    liName.textContent = PBJArray[i].name;
     menuElement.appendChild(liName);
 
     let liIngredients = document.createElement('li');
-    liIngredients.textContent = 'Ingredients: ' + PBJMenuArray[i].breadType + '\n' + PBJMenuArray[i].pbType + '\n' + PBJMenuArray[i].jellyType + '\n' + PBJMenuArray[i].hasBananas + '\n' + PBJMenuArray[i].isCutInTwo;
+    liIngredients.textContent = 'Ingredients: ' + PBJArray[i].breadType + '\n' + PBJArray[i].pbType + '\n' + PBJArray[i].jellyType + '\n' + PBJArray[i].hasBananas + '\n' + PBJArray[i].isCutInTwo;
     menuElement.appendChild(liIngredients);
 
     let liSrc = document.createElement('li');
-    liSrc.textContent = PBJMenuArray[i].src;
+    liSrc.textContent = PBJArray[i].src;
     menuElement.appendChild(liSrc);
 
+  }
+}
+
+function getDataFromStorage() {
+
+  let storedPBJArray = localStorage.getItem('PBJArray');
+  if (storedPBJArray) {
+    PBJArray = JSON.parse(storedPBJArray);
+    // if you need to reinstaciate the plain Js objects back into PBJ DO IT HERE!!!
+    // PBJArray[0].votes++;
+    PBJArray.push(storedPBJArray);
+    PBJArray.push(PBJArray);
+    // console.log('aftervoted', PBJArray);
   }
 }
 
@@ -58,20 +95,21 @@ function viewResults() {
 }
 
 function renderChart() {
-
+  menuRender();
   const ctx = document.getElementById('myChart');
-
-  let pbjVotes = [];
   let pbjNames = [];
+  let pbjVotes = [];
 
-  for (let i = 0; i < PBJMenuArray.length; i++) {
-    console.log(PBJMenuArray[i]);
-    let name = PBJMenuArray[i].name;
+  for (let i = 0; i < PBJArray.length; i++) {
+    // console.log(PBJArray[i]);
+    let name = PBJArray[i].name;
 
     pbjNames.push(name);
-    pbjVotes.push(PBJMenuArray[i].votes);
-    
+    pbjVotes.push(PBJArray[i].votes);
+
   }
+  // console.log(pbjVotes);
+  // console.log(pbjNames);
 
   let config = {
     type: 'bar',
@@ -89,7 +127,7 @@ function renderChart() {
             'rgb(25, 117, 1, 1)'
           ]
         },
-        
+
       ],
     },
     options: {
@@ -100,9 +138,12 @@ function renderChart() {
       }
     }
   };
-  new Chart(ctx, config);
+  chart = new Chart(ctx, config);
+  // console.log(pbjNames);
+  // console.log(pbjVotes);
 }
 
+getDataFromStorage();
 renderChart();
 
 
@@ -117,10 +158,10 @@ renderChart();
 // Executable Code
 menuRender();
 
-for (let i = 0; i < PBJMenuArray.length; i++) {
+for (let i = 0; i < PBJArray.length; i++) {
   const option = document.createElement('option');
-  option.text = PBJMenuArray[i].name;
-  option.value = PBJMenuArray[i];
+  option.text = PBJArray[i].name;
+  option.value = PBJArray[i];
   menu.add(option);
 }
 
