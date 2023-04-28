@@ -56,7 +56,7 @@ function menuRender() {
     let div = document.createElement('div');
 
     let img = document.createElement('img');
-    img.src = `../img/${PBJArray[i].src}.jpeg`;
+    img.src = `../${PBJArray[i].src}`;
     article.appendChild(img);
 
 
