@@ -25,7 +25,7 @@ function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src = 'PB-Po
   this.jellyType = jellyType;
   this.hasBananas = bananas;
   this.isCutInTwo = cutInTwo;
-  this.src = `../img/${src}.jpeg`;
+  this.src = `img/${src}.jpeg`;
   this.votes = votes;
 
 }
