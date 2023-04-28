@@ -310,6 +310,17 @@ footer{
   border: 5px solid #b07438;
 }
 
+#bottom-bun.white {
+  background-color: #f1e4d7;
+  border: 5px solid #f1e4d7;
+}
+
+#bottom-bun.wheat {
+  background-color: #b07438;
+  border: 5px solid #b07438;
+}
+
+
 #lettuce.grape {
   background-color: #63048F;
   border-left: 5px solid #63048F;
