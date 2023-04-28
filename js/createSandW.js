@@ -107,7 +107,23 @@ else {
   }
   topBun.classList.add("wheat")
 };
+breadChanged(event)
 };
+
+function breadChanged(event){
+  if (event.target.value === "White"){
+    if (bottomBun.classList.contains('wheat')){
+      bottomBun.classList.remove('wheat');
+    }
+    bottomBun.classList.add("white");
+  }
+  else {
+    if (bottomBun.classList.contains('white')){
+      bottomBun.classList.remove('white');
+    }
+    bottomBun.classList.add("wheat")
+  };
+  };
 // Executable Code
 
 
