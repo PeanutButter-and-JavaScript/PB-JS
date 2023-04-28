@@ -108,10 +108,10 @@ function renderChart() {
           data: pbjVotes,
           borderWidth: 1,
           backgroundColor: [
-            'rgb(25, 117, 1, 1)'
+            'rgb(255, 195, 43, 1)'
           ],
           borderColor: [
-            'rgb(25, 117, 1, 1)'
+            'rgb(255, 195, 43, 1)'
           ]
         },
 

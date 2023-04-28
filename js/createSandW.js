@@ -18,7 +18,7 @@ if (PBJArrayFromStorage) {
 
 
 // Constructor
-function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src = 'BioPic', votes = 0) {
+function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src = 'PB-Power', votes = 0) {
   this.name = name;
   this.breadType = breadType;
   this.pbType = pbType;
@@ -48,12 +48,11 @@ let handleSubmit = function (event) {
     pBType,
     jellyType,
     bananaType,
-    cutType,
+    cutType
   );
-  function redirectToPage() {
-    //window.location.href = "https://peanutbutter-and-javascript.github.io/PB-JS/index.html";
-    window.location.href = "https://www.google.com";
-  }
+
+  window.location.href = 'index.html';
+
 
   form.removeEventListener('submit', handleSubmit);
   console.log(PBJArray);
