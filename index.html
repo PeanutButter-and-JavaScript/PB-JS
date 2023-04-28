@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to PB&JavaScript!</h1>
+    <div>
+      <Nav>
+        <ul>
+          <li id="nav"><a href="index.html">Home</a></li>
+          <li id="nav"><a href="createSandW.html">Build-A-Sandwich</a></li>
+          <li id="nav"><a href="about-us.html">About Us</a></li>
+        </ul>
+      </Nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Welcome to PB & JavaScript!</h2>
+      <p>If you love sandwiches you came to the right place! Here at PB & J we make all your dreams come true! Whether you like strawberry or grape, chucky or smooth, or even if you eat a PB&J with bananas!!! Come to the one and only site where we let YOU the customer design OUR menu! Think we're crazy?!? Only for PB&Js!!! Please fill our menu with all your crazy ideas, then vote for your favorite one! Cheers! </p>
+      <ul id="ul"></ul>
+    </section id="sectionChart">
+    <section id="sixty">
+      <div id="chart" class="graph">
+        <canvas id="myChart"></canvas>
+      </div>
+      <form>
+        <label for="menu">Vote for your favs!</label>
+        <select id="menu" name="menu">
+          <option value="">Select A Sando</option>
+        </select>
+      </form>
+      <div>
+        <button id="voteButton" class="vote" type="button" style="--c: #373B44;--b: 5px;--s:12px">Vote</button>
+      </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;Dan Quinn, Anthony Sinitsa, Ashley Taylor</p>
+  </footer>
+  <script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js
+"></script>
+  <script src="js/createSandW.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

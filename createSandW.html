@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>Build-A-Sandwich!</h1>
+    <Nav>
+      <ul>
+        <li id="nav"><a href="index.html">Home</a></li>
+        <li id="nav"><a href="createSandW.html">Build-A-Sandwich</a></li>
+        <li id="nav"><a href="about-us.html">About Us</a></li>
+      </ul>
+    </Nav>
+  </header>
+  <main id="mainsandy">
+    <section id="createSando">
+
+      <div class="sandyform">
+        <form>
+          <fieldset class="formStyle">
+            <legend>Build-A-Sandwich!</legend>
+            <label id="title">Sando Name
+              <input type="text" name="name" placeholder="Sando Name " required>
+            </label>
+            <div>
+              <img id="makePB" src="img/whiteBread.jpeg" alt="White Bread">
+              <img id="makePB" src="img/wheatBread.jpeg" alt="Wheat Bread">
+            </div>
+            <fieldset>
+
+              <label for="menu">Select Bread</label>
+              <select id="menuBread" name="breadType">
+                <option value="" disabled selected>Select Bread</option>
+                <option value="White">White</option>
+                <option value="Wheat">Wheat</option>
+              </select>
+            </fieldset>
+            <div>
+              <img id="makePB" src="img/grapeJam.jpeg" alt="Grape Jam">
+              <img id="makePB" src="img/strawberryJam.jpeg" alt="Strawberry Jam">
+            </div>
+            <fieldset>
+              <label for="menu">Select Jam</label>
+              <select id="menu" name="jellyType">
+                <option value="" disabled selected>Select Jelly</option>
+                <option value="Grape">Grape</option>
+                <option value="Strawberry">Strawberry</option>
+              </select>
+            </fieldset>
+            <div>
+              <img id="makePB" src="img/chunkyPB.jpeg" alt="Chunky PB">
+              <img id="makePB" src="img/smoothPB.jpeg" alt="Smooth PB">
+            </div>
+            <fieldset>
+              <label for="menu">Select PB</label>
+              <select id="menu" name="pBType">
+                <option value="" disabled selected>Select Peanut-Butter</option>
+                <option value="Smooth">Smooth</option>
+                <option value="Chunky">Chunky</option>
+              </select>
+            </fieldset>
+            <img id="makePB" src="img/bananaOption.jpeg" alt="Bananas">
+            <fieldset>
+              <label for="menu">Bananas? </label>
+              <select id="menu" name="bananaType">
+                <option value="" disabled selected>Add sliced Bananas?</option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+              </select>
+            </fieldset>
+            <img id="makePB" src="img/renaissance.jpeg" alt="Strawberry Jam">
+            <fieldset>
+              <label for="menu">Half or Whole?</label>
+              <select id="menu" name="cutType">
+                <option value="" disabled selected>Half or Whole?</option>
+                <option value="half">half</option>
+                <option value="whole">Whole</option>
+              </select>
+            </fieldset>
+          </fieldset>
+          <button onclick="redirectToPage()" type="text" id="voteButton" name="submit" style="--c: #373B44;--b: 5px;--s:12px">Create Sammich!</button>
+        </form>
+      </div>
+    </section>
+    <!-- <section id="createSando">
+
+      <div id="sandypreview">
+        <div id="burger">
+          <div id="top-bun" class="burger-layer"></div>
+          <div id="lettuce" class="burger-layer"></div>
+          <div class="lettuce-down let-one-down"></div>
+          <div class="lettuce-down let-two-down"></div>
+          <div class="lettuce-down let-three-down"></div>
+          <div class="lettuce-down let-four-down"></div>
+          <div class="lettuce-down let-five-down"></div>
+          <div class="lettuce-down let-six-down"></div>
+          <div class="lettuce-down let-seven-down"></div>
+          <div class="lettuce-down let-eight-down"></div>
+          <div class="lettuce-down let-nine-down"></div>
+          <div class="lettuce-down let-ten-down"></div>
+          <div id="tomato" class="burger-layer"></div>
+          <div id="lettuce-down" class="lettuce-down let-one-down"></div>
+          <div class="lettuce-down let-two-down"></div>
+          <div class="lettuce-down let-three-down"></div>
+          <div class="lettuce-down let-four-down"></div>
+          <div class="lettuce-down let-five-down"></div>
+          <div class="lettuce-down let-six-down"></div>
+          <div class="lettuce-down let-seven-down"></div>
+          <div class="lettuce-down let-eight-down"></div>
+          <div class="lettuce-down let-nine-down"></div>
+          <div class="lettuce-down let-ten-down"></div>
+          <div id="bottom-bun" class="burger-layer"></div>
+        </div>
+        <div class="plate-div transform">
+          <div class="plate"></div>
+        </div>
+      </div>
+    </section> -->
+  </main>
+  <footer>
+    <p>&copy;Dan Quinn, Anthony Sinitsa, Ashley Taylor</p>
+  </footer>
+  <script src="js/createSandW.js"></script>
+  <script src="js/handleForm.js"></script>
+  <script src="js/sandwichPreview.js"></script>
+</body>
+
+</html>

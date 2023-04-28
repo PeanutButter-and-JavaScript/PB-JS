@@ -1,0 +1,510 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  color: white;
+  background-color: rgb(132, 0, 255);
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-family: 'Chewy', cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+h3 {
+  font-family: 'Chewy', cursive;
+  font-weight: 400;
+  font-size: xx-large;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+p {
+  margin-left: 10px;
+  font-size: x-large;
+  line-height: 1.25rem;
+}
+
+/* #myChart { */
+/* height: 5rem; */
+/* width: 5rem; */
+/* } */
+/* div {
+  display: flex;
+  flex-direction: row;
+} */
+#makePB {
+  width: 20rem;
+  height: 20rem;
+}
+
+#nav {
+  font-size: large;
+  border: 5px solid black;
+  border-radius: 25px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  margin-left: 7%;
+  margin-bottom: 1.5rem;
+}
+
+nav li {
+  display: inline;
+  margin: 10px;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+section {
+  width: 40%;
+}
+
+#sixty {
+  width: 60%;
+}
+
+h1 {
+  font-size: 7rem;
+  color: white;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+  font-family: 'Chewy', cursive;
+  justify-self: center;
+  text-align: left;
+}
+
+body {
+  background-color: rgba(183, 0, 255, 0.319);
+  min-height: 100%;
+  height: 100%;
+
+}
+
+#createSando {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+  border-radius: 25%;
+  border: 3px solid black;
+}
+
+main:not(#mainsandy),
+.sandyform {
+  position: relative;
+  background-color: rgba(117, 57, 27, 0.34);
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: 6rem 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem 6rem 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: bottom 80px;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+li {
+  margin-top: 10px;
+}
+
+legend {
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+  font-family: 'Chewy', cursive;
+}
+#title {
+  font-size: 3rem;
+}
+label {
+  line-height: 3rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Chewy', cursive;
+  ;
+}
+
+
+
+
+button {
+  --b: 3px;   /* border thickness */
+  --s: .15em; /* size of the corner */
+  --c: #BD5532;
+  
+  padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+  color: var(--c);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #2f014600;
+  outline-offset: .2em;
+}
+button:hover,
+button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: .05em;
+}
+button:active {
+  background: var(--c);
+  color: #fff;
+}
+
+button {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  margin: .1em;
+}
+
+.sandyform {
+  width: 100%;
+}
+
+.sandyform div {
+  display: flex;
+}
+
+#mainsandy {
+  display: flex;
+  flex-direction: row;
+}
+
+#sandypreview {
+  width: 500px;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 1%;
+  width: 75%;
+  justify-content: center;
+}
+#bio{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.bio h2 {
+  font-size: 5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  justify-content: center;
+}
+
+.bio img {
+  width: 85%;
+  height: 55%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bio p {
+  width: 85%;
+  height: 20%;
+  font-size: 1.5rem;
+  /* padding-bottom: 10%; */
+
+  margin-bottom: 12px;
+  margin-left: 6px;
+  text-indent: 7%;
+  line-height: 1.3;
+  font-size: larger;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.links {
+  margin-bottom: 20px;
+}
+
+.bio a {
+  display: block;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
+  line-height: 1.3;
+  margin-bottom: auto;
+}
+
+.graph {
+  position: relative;
+  height: 40vh;
+  width: 80vh;
+}
+
+footer {
+  background-color: rgb(132, 0, 255);
+  position: fixed;
+  height: 25px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  /* margin-bottom: 2px; */
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+}
+
+.radio-container label {
+  margin-right: 10px;
+}
+
+/* #sandypreview {
+  background: #EDEDED;
+  overflow: hidden;
+}
+
+#burger {
+  margin: 22% auto 0;
+  width: 300px;
+  position: relative;
+  left: 10px;
+}
+
+.burger-layer {
+  height: 0px;
+  width: 300px;
+  border-radius: 2px;
+}
+
+#top-bun {
+  height: 40px;
+  background-color: #C87C31;
+  border: 5px solid #C87C31;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#lettuce {
+  height: 2px;
+  background-size: 300px;
+  background-color: #63048F;
+  border-left: 5px solid #63048F;
+  border-right: 5px solid #63048F;
+  border-top: 5px solid #63048F;
+}
+
+#tomato {
+  height: 27px;
+  background-color: #8C4303;
+  /*background-image: linear-gradient(to right, #F34700, #DA755F, #F34700);*/
+  /*border: 1px solid #E27C66;*/
+  /* border-radius: 2px;
+  margin-left: 4.5px;
+}
+
+.lettuce-down {
+  background-color: #63048F;
+  width: 35px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 0 -10px 0;
+  position: relative;
+  z-index: 999;
+  top: -5px;
+}
+
+.let-one-down {
+  float: left;
+}
+
+.let-two-down {
+  float: left;
+  left: 35px;
+}
+
+.let-three-down {
+  float: left;
+  left: 65px;
+}
+
+.let-four-down {
+  float: left;
+  left: 95px;
+}
+
+.let-five-down {
+  float: left;
+  left: 125px;
+}
+
+.let-six-down {
+  float: left;
+  left: 155px;
+}
+
+.let-seven-down {
+  float: left;
+  left: 185px;
+}
+
+.let-eight-down {
+  float: left;
+  left: 215px;
+}
+
+.let-nine-down {
+  float: left;
+  left: 245px;
+}
+
+.let-ten-down {
+  float: left;
+  left: 275px;
+}
+
+#bottom-lettuce {
+  background-color: #63048F;
+}
+
+#bottom-bun {
+  height: 40px;
+  background-color: #C87C31;
+  /*background-image: linear-gradient(#CC903F, #C87C31);*/
+  /* border: 5px solid #C87C31;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.plate-div {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.plate {
+  width: 700px;
+  height: 700px;
+  display: inline-block;
+  border-top: 20px solid #fff;
+  border-bottom: 20px solid #fff;
+  border-left: 20px solid #fff;
+  border-right: 20px solid #fff;
+  border-radius: 500px;
+  position: relative;
+  top: -350px;
+  z-index: -10;
+}
+
+.plate-div.transform .plate {
+  transform: perspective(50em) rotateX(100deg);
+  background: #F9F9F9;
+}
+
+#top-bun.white {
+  background-color: #efd1b2;
+  border: 5px solid #efd1b2;
+}
+
+#top-bun.wheat {
+  background-color: #b07438;
+  border: 5px solid #b07438;
+}
+
+#bottom-bun.white {
+  background-color: #efd1b2;
+  border: 5px solid #efd1b2;
+}
+
+#bottom-bun.wheat {
+  background-color: #b07438;
+  border: 5px solid #b07438;
+}
+
+
+#lettuce.grape {
+  background-color: #63048F;
+  border-left: 5px solid #63048F;
+  border-right: 5px solid #63048F;
+  border-top: 5px solid #63048F;
+}
+
+#lettuce.strawberry {
+  background-color: #c03714;
+  border-left: 5px solid #c03714;
+  border-right: 5px solid #c03714;
+  border-top: 5px solid #c03714;
+}
+
+#lettuce.strawberry~.lettuce-down {
+  background-color: #c03714;
+}
+
+#lettuce.grape~.lettuce-down {
+  background-color: #63048F;
+}
+
+#lettuce.strawberry~.bottom-lettuce {
+  background-color: #c03714;
+}
+
+#lettuce.grape~.bottom-lettuce {
+  background-color: #63048F;
+}
+
+fieldset { */
+  width: 600px;  */
