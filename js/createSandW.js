@@ -7,10 +7,10 @@ let PBJArrayFromStorage = localStorage.getItem('PBJArray');
 if (PBJArrayFromStorage) {
   PBJArray = JSON.parse(PBJArrayFromStorage);
 } else {
-  let danwich = new PBJ('Danwich', 'Wheat', 'Chunky', 'Grape', 'Optional: Bananas', 'Whole/Half', 'img/...', 5);
-  let DanwichTwoPointO = new PBJ('DanwichTwoPointO', 'White', 'Chunky', 'Grape', 'Optional: Bananas', 'Whole/Half', 'src', 8);
-  let SmashTastic = new PBJ('SmashTastic', 'Wheat', 'Strawberry', 'Chunky', 'Optional: Bananas', 'Whole/Half', 'src', 10);
-  let antonWich = new PBJ('AntonWich', 'Wheat', 'Smooth', 'Strawberry', 'Optional: Nutella', 'Whole/Half', 'img/', 15);
+  let danwich = new PBJ('Danwich', 'Wheat', 'Chunky', 'Grape', 'Optional: Bananas', 'Whole/Half', 'bananaOption', 5);
+  let DanwichTwoPointO = new PBJ('DanwichTwoPointO', 'White', 'Chunky', 'Grape', 'Optional: Bananas', 'Whole/Half', 'chunkyPB', 8);
+  let SmashTastic = new PBJ('SmashTastic', 'Wheat', 'Strawberry', 'Chunky', 'Optional: Bananas', 'Whole/Half', 'grapeSandwich', 10);
+  let antonWich = new PBJ('AntonWich', 'Wheat', 'Smooth', 'Strawberry', 'Optional: Nutella', 'Whole/Half', 'strawberrySandwich', 15);
 
   PBJArray.push(danwich, DanwichTwoPointO, SmashTastic, antonWich);
   // PBJMenuArray.push(danwich, DanwichTwoPointO, SmashTastic, antonWich);
@@ -18,14 +18,14 @@ if (PBJArrayFromStorage) {
 
 
 // Constructor
-function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src, votes = 0) {
+function PBJ(name, breadType, pbType, jellyType, bananas, cutInTwo, src = 'BioPic', votes = 0) {
   this.name = name;
   this.breadType = breadType;
   this.pbType = pbType;
   this.jellyType = jellyType;
   this.hasBananas = bananas;
   this.isCutInTwo = cutInTwo;
-  this.src = `img/${src}.jpg`;
+  this.src = `../img/${src}.jpeg`;
   this.votes = votes;
 
 }
@@ -48,7 +48,7 @@ let handleSubmit = function (event) {
     pBType,
     jellyType,
     bananaType,
-    cutType
+    cutType,
   );
   function redirectToPage() {
     //window.location.href = "https://peanutbutter-and-javascript.github.io/PB-JS/index.html";
