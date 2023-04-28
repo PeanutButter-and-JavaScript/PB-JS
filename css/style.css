@@ -1,7 +1,11 @@
 * {
   box-sizing: border-box;
 }
-
+#logo{
+  border-radius: 100%;
+  height: 6rem;
+  width: 6rem;
+}
 header {
   color: white;
   background-color: rgb(132, 0, 255);
@@ -9,6 +13,7 @@ header {
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: left;
 }
 
 h2 {
