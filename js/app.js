@@ -65,7 +65,8 @@ function menuRender() {
     div.appendChild(h3);
 
     let p = document.createElement('p');
-    p.textContent = `Ingredients: ${PBJArray[i].breadType}, ${PBJArray[i].pbType}, ${PBJArray[i].jellyType}, ${PBJArray[i].hasBananas}, ${PBJArray[i].isCutInTwo}`;
+    p.textContent =`Ingredients: 
+    \n${PBJArray[i].breadType}, ${PBJArray[i].pbType}, ${PBJArray[i].jellyType}, ${PBJArray[i].hasBananas}, ${PBJArray[i].isCutInTwo}`;
     div.appendChild(p);
 
 
