@@ -26,7 +26,7 @@ Dan Quinn
 
 ## Lighthouse Accessibility Report Score
 
-
+![Lighthouse  Score](img/Screenshot%202023-04-28%20at%2010.12.37%20AM.png)
 
 ## Reflections and Comments
 
